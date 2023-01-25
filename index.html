@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head> 
+    <meta charset="utf-8">
+    <title>addition of two numbers app</title></head>
+    <body>
+    <div id="container">
+        <label for="txtnum1">number1:</label><br/>
+        <input type="text"id="txtnum1" value="0"/><br>
+        
+        <label for="textnum2">number2:</label><br/>
+        <input type="text" id="txtnum2" value="0"/><br/>
+
+        <label for="textsum">sum:</label><br/>
+        <input type="text" id="txtsum" value="0" disabled/><br/><br/>
+
+        <input type="button" value="Add" onclick="Add()"/>
+        <input type="button" value="Reset" onclick="Reset()"/>
+    </div> 
+   
+    <script type="text/javascript">
+
+        function Reset()
+        {
+            document.getElementById("txtnum1").value = "0";
+            document.getElementById("txtnum2").value = "0";
+            document.getElementById("txtsum").value = "0";
+        }
+
+        function Add()
+        {
+            var num1 = Number(document.getElementById("txtnum1").value);
+            var num2 = Number(document.getElementById("txtnum2").value);
+            var sum = num1 + num2;
+            // console.log(sum)
+            document.getElementById("txtsum").value = String(sum);
+
+        }
+    </script>
+
+    </body>
+    </html>
